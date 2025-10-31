@@ -25,7 +25,7 @@ esVacia
 ^catedras isEmpty.
 !
 
-iniciar:nom cantMaterias: cantMat cantNiveles: cantNiv disc: unaDisc
+iniciarCarrera:nom cantMaterias: cantMat cantNiveles: cantNiv disc: unaDisc
 nombre:=nom.
 cantMaterias:=cantMat.
 cantNiveles:=cantNiv.
@@ -72,7 +72,7 @@ verTodos
 agregarCatedra:!public! !
 eliminarCatedra:!public! !
 esVacia!public! !
-iniciar:cantMaterias:cantNiveles:disc:!public! !
+iniciarCarrera:cantMaterias:cantNiveles:disc:!public! !
 modificarCantMaterias:!public! !
 modificarCantNiveles:!public! !
 modificarDisciplina:!public! !
@@ -88,8 +88,8 @@ verTodos!public! !
 
 !Carrera class methodsFor!
 
-crear:nom con:cantMat con:cantNiv con:unaDisc
-    ^self new iniciar:nom cantMaterias: cantMat cantNiveles: cantNiv disc: unaDisc.
+crearCarrera:nom con:cantMat con:cantNiv con:unaDisc
+    ^(self new) iniciarCarrera:nom cantMaterias: cantMat cantNiveles: cantNiv disc: unaDisc.
 
 
 
@@ -97,6 +97,6 @@ crear:nom con:cantMat con:cantNiv con:unaDisc
 ! !
 
 !Carrera class categoriesForMethods!
-crear:con:con:con:!public! !
+crearCarrera:con:con:con:!public! !
 !
 
