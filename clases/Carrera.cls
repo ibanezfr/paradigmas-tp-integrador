@@ -25,7 +25,10 @@ esVacia
 ^catedras isEmpty.
 !
 
-iniciarCarrera:nom cantMaterias: cantMat cantNiveles: cantNiv disc: unaDisc
+existeCatedra: unaCat
+^catedras includes: unaCat.!
+
+iniciar:nom cantMaterias: cantMat cantNiveles: cantNiv disc: unaDisc
 nombre:=nom.
 cantMaterias:=cantMat.
 cantNiveles:=cantNiv.
@@ -72,7 +75,8 @@ verTodos
 agregarCatedra:!public! !
 eliminarCatedra:!public! !
 esVacia!public! !
-iniciarCarrera:cantMaterias:cantNiveles:disc:!public! !
+existeCatedra:!public! !
+iniciar:cantMaterias:cantNiveles:disc:!public! !
 modificarCantMaterias:!public! !
 modificarCantNiveles:!public! !
 modificarDisciplina:!public! !
@@ -88,8 +92,8 @@ verTodos!public! !
 
 !Carrera class methodsFor!
 
-crearCarrera:nom con:cantMat con:cantNiv con:unaDisc
-    ^(self new) iniciarCarrera:nom cantMaterias: cantMat cantNiveles: cantNiv disc: unaDisc.
+crear:nom con:cantMat con:cantNiv con:unaDisc
+    ^self new iniciar:nom cantMaterias: cantMat cantNiveles: cantNiv disc: unaDisc.
 
 
 
@@ -97,6 +101,6 @@ crearCarrera:nom con:cantMat con:cantNiv con:unaDisc
 ! !
 
 !Carrera class categoriesForMethods!
-crearCarrera:con:con:con:!public! !
+crear:con:con:con:!public! !
 !
 

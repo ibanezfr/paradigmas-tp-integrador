@@ -1,4 +1,4 @@
-"Filed out from Dolphin Smalltalk"!
+﻿"Filed out from Dolphin Smalltalk"!
 
 Catedra subclass: #Cuatrimestral
 	instanceVariableNames: 'cuatrimestral'

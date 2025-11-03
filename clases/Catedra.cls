@@ -1,7 +1,7 @@
 ﻿"Filed out from Dolphin Smalltalk"!
 
 Object subclass: #Catedra
-	instanceVariableNames: 'codigo nombre cargaHoraria legajoDocente tipo nivel modalidad fechaInicio fechaFin cuatrimestre'
+	instanceVariableNames: 'codigo nombre cargaHoraria legajoDocente tipo nivel anual'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
@@ -14,26 +14,18 @@ Catedra comment: ''!
 
 !Catedra methodsFor!
 
-configurarBimestral: ini fin: fi
-    modalidad := 'Bimestral'.
-    fechaInicio := ini.
-    fechaFin := fi.!
-
-configurarCuatrimestral: cuatri
-    modalidad := 'Cuatrimestral'.
-    cuatrimestre := cuatri.!
-
-iniciar: unCod con: unNom con: unaCarga con: unLeg con: unTipo con: unNiv con: unaMod
+iniciarCatedra: unCod con: unNom con: unaCarga con: unLeg con: unTipo con: unNiv
     codigo := unCod.
     nombre := unNom.
     cargaHoraria := unaCarga.
     legajoDocente := unLeg.
     tipo := unTipo.
     nivel := unNiv.
-    modalidad := unaMod.
-    fechaInicio := nil.
-    fechaFin := nil.
-    cuatrimestre := nil.!
+   anual:= false.!
+
+modAnual: unaAnu
+anual:=unaAnu.
+!
 
 modCargaHoraria:unaCarga
 cargaHoraria:=unaCarga.!
@@ -42,9 +34,8 @@ modCodigo: unCod
 codigo:= unCod.
 !
 
-modModalidad: unaMod
-modalidad:= unaMod.
-!
+modLegajo: unLeg
+legajoDocente:=unLeg.!
 
 modNivel: unNiv
 nivel:= unNiv.
@@ -56,14 +47,17 @@ modNombre: unNom
 modTipo: unTipo
 tipo:=unTipo.!
 
+verAnual
+^anual.!
+
 verCargaHoraria 
 ^cargaHoraria.!
 
 verCodigo 
 ^codigo.!
 
-verModalidad 
-^modalidad.!
+verLegajo
+^legajoDocente.!
 
 verNivel 
 ^nivel.!
@@ -76,18 +70,18 @@ verTipo
 ^tipo.! !
 
 !Catedra categoriesForMethods!
-configurarBimestral:fin:!public! !
-configurarCuatrimestral:!public! !
-iniciar:con:con:con:con:con:con:!public! !
+iniciarCatedra:con:con:con:con:con:!public! !
+modAnual:!public! !
 modCargaHoraria:!public! !
 modCodigo:!public! !
-modModalidad:!public! !
+modLegajo:!public! !
 modNivel:!public! !
 modNombre:!public! !
 modTipo:!public! !
+verAnual!public! !
 verCargaHoraria!public! !
 verCodigo!public! !
-verModalidad!public! !
+verLegajo!public! !
 verNivel!public! !
 verNombre!public! !
 verTipo!public! !
@@ -95,10 +89,14 @@ verTipo!public! !
 
 !Catedra class methodsFor!
 
-crear: unCod con: unNom con: unaCarga con: unLeg con: unTipo con: unNiv con: unaMod
-    ^self new iniciar: unCod con: unNom con: unaCarga con: unLeg con: unTipo con: unNiv con: unaMod.! !
+crearCatedra: unCod con: unNom con: unaCarga con: unLeg con: unTipo con: unNiv
+    ^self new iniciarCatedra: unCod con: unNom con: unaCarga con: unLeg con: unTipo con: unNiv.!
+
+crearCatedra: unCod con: unNom con: unaCarga con: unLeg con: unTipo con: unNiv con: anu
+    ^self new iniciarCatedra: unCod con: unNom con: unaCarga con: unLeg con: unTipo con: unNiv con: anu.! !
 
 !Catedra class categoriesForMethods!
-crear:con:con:con:con:con:con:!public! !
+crearCatedra:con:con:con:con:con:!public! !
+crearCatedra:con:con:con:con:con:con:!public! !
 !
 
