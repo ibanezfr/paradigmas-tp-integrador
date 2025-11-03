@@ -2,11 +2,10 @@
 
 ## Grupo 2 - Inciso 2
 Integrantes:
-- Galvan, Valentin
-- Bardella Acuña, Facundo
-- Scarselletta, Lautaro
-- Soto, Facundo Ariel
-- Ibañez, Franco Ezequiel
+- [Bardella Acuña, Facundo](https://github.com/Aleytia123)
+- [Scarselletta, Lautaro](https://github.com/lauscarsel)
+- [Soto, Facundo Ariel](https://github.com/Riyuu02)
+- [Ibañez, Franco Ezequiel](https://github.com/ibanezfr)
 
 
 ## Inciso 2 - Sistema de Gestión de Carrera
