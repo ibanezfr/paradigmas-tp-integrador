@@ -23,7 +23,7 @@ configurarCuatrimestral: cuatri
     modalidad := 'Cuatrimestral'.
     cuatrimestre := cuatri.!
 
-iniciarCatedra: unCod con: unNom con: unaCarga con: unLeg con: unTipo con: unNiv con: unaMod
+iniciar: unCod con: unNom con: unaCarga con: unLeg con: unTipo con: unNiv con: unaMod
     codigo := unCod.
     nombre := unNom.
     cargaHoraria := unaCarga.
@@ -78,7 +78,7 @@ verTipo
 !Catedra categoriesForMethods!
 configurarBimestral:fin:!public! !
 configurarCuatrimestral:!public! !
-iniciarCatedra:con:con:con:con:con:con:!public! !
+iniciar:con:con:con:con:con:con:!public! !
 modCargaHoraria:!public! !
 modCodigo:!public! !
 modModalidad:!public! !
@@ -95,10 +95,10 @@ verTipo!public! !
 
 !Catedra class methodsFor!
 
-crearCatedra: unCod con: unNom con: unaCarga con: unLeg con: unTipo con: unNiv con: unaMod
-    ^(self new) iniciarCatedra: unCod con: unNom con: unaCarga con: unLeg con: unTipo con: unNiv con: unaMod.! !
+crear: unCod con: unNom con: unaCarga con: unLeg con: unTipo con: unNiv con: unaMod
+    ^self new iniciar: unCod con: unNom con: unaCarga con: unLeg con: unTipo con: unNiv con: unaMod.! !
 
 !Catedra class categoriesForMethods!
-crearCatedra:con:con:con:con:con:con:!public! !
+crear:con:con:con:con:con:con:!public! !
 !
 
